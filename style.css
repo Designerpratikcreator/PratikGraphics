@@ -1,48 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #050505;
+    font-family: 'Inter', sans-serif;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            overflow: hidden;
-            background: #0d1117;
-            color: #ffffff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at center, #1a1a2e 0%, #050505 100%);
+}
 
-        #bubble-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    pointer-events: none; /* Allows mouse to pass through to canvas */
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
 
-        .bubble {
-            position: absolute;
-            bottom: -50px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            pointer-events: none;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-            animation: bubble-up linear infinite;
-        }
+h1 {
+    font-size: 4rem;
+    font-weight: 200;
+    margin: 0;
+    opacity: 0.8;
+}
 
-        @keyframes bubble-up {
-            0% {
-                transform: translateY(0) scale(0.5);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            80% {
-                opacity: 0.5;
-            }
-            100% {
-                transform: translateY(-100vh) scale(1.5);
-                opacity: 0;
-            }
-        }
-
+p {
+    font-size: 0.8rem;
+    opacity: 0.4;
+}
